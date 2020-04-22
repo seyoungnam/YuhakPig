@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="py-5">
+    <div class="container">
+        <div class="text-dark text-center mb-4 ">
+            <h2 class="h5 text-secondary">Card</h2>
+            <h1>GMAT 후기 자료</h1>
+            <p>Card에 대한 설명</p>
+        </div>
+        <div class="card-deck"> <!-- card UI를 만들겠다라고 선언 -->
+            {% for post in posts %}
+            <div class="card">
+                <div class="card-body">
+                    <img src="{% static 'img/pig_fav.png' %}" alt="참깨" class="card-img-top">
+                    {% if post.subject == '1' %}
+                    <h3 class="card-title">과목: Quant</h3>
+                    {% elif post.subject == '2' %}
+                    <h3 class="card-title">과목: Verbal</h3>
+                    {% elif post.subject == '3' %}
+                    <h3 class="card-title">과목: IR</h3>
+                    {% else %}
+                    <h3 class="card-title">과목: AWA</h3>
+                    {% endif %}
+                    <p class="card-text">업데이트: {{ post.published_date }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="" class="btn btn-secondary btn-block">다운로드</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

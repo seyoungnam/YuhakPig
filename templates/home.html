@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra-style %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="jumbotron jumbotro-fluid mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 text-light align-self-center text-dark px-5">
+              
+                <h1 class="main-1" style="width:400px"><B>유학돼지</B>
+                  <img src="{% static 'img/pig_fav.png' %}" alt="FlyingPig" width="45">
+                </h1>
+                
+                <hr>
+                <br>
+                <br>
+                <h3 class="main-2">GRE/GMAT부터 SOP 컨설팅까지<br>
+                   유학의 토탈솔루션
+                </h3>
+                <br>
+                <p class="main-3">석박사 유학을 꿈꾸고 계신가요?<br>
+                  GRE/GMAT 후기자료부터 SOP/Essay 컨설팅,<br>
+                  그리고 지원자들의 통계 자료까지<br>
+                  유학은 유학돼지에서 준비하세요!<br>
+                </P>
+
+            </div>
+            <div class="col-md-5 align-self-center">
+                <form action="" class="bg-light p-5 rounded">
+                    <div class="form-group">
+                        <label class="h6" for="">Username</label>
+                        <input type="text" class="form-control" id="user" placeholder="이름을 입력하시오.">
+                    </div>
+                    <div class="form-group">
+                        <label class="h6" for="">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="h6" for="">Password</label>
+                        <input type="password" class="form-control" id="pw" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+
+                    <div class="form-group custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="check0">
+                        <label for="check0" class="custom-control-label">개인의 정보 수집 정책에 동의합니다.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-block btn-lg">
+                        가입하기
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container shadow-lg p-5 rounded">
+        <div class="row">
+            <div class="col-xl-4 align-self-center">
+                <h2>유학돼지</h2>
+                <p>Bootstrap으로 프론트엔드를 빠르게 개발하여,
+                    최종 프로젝트를 성공적으로 마칠 수 있습니다.
+                </p>
+            </div>
+            <div class="col-xl-8 row text-center align-self-center">
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <i class="display-4 text-primary fas fa-code"></i>
+                    <h3 class="h5">Easy Coding</h3>
+                    <p>쉽게 배울 수 있습니다.</p>
+                    <button class="btn btn-primary">Try Bootstrap</button>
+                </div>
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <i class="display-4 text-primary fas fa-mobile-alt align-self-center"></i>
+                    <h3 class="h5">Responsive Web</h3>
+                    <p>반응형 웹을 지원합니다.</p>
+                    <button class="btn btn-primary">Try Bootstrap</button>
+                </div>
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <i class="display-4 text-primary fas fa-comment-dots align-self-center"></i>
+                    <h3 class="h5">Contact</h3>
+                    <p>더 궁금하신가요 ?</p>
+                    <button class="btn btn-primary">Try Bootstrap</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}
+
